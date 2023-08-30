@@ -1,0 +1,435 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Pompiere&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; }
+
+/* GRID PADRE*/
+.grid-padre {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 14vh 70vh 16vh;
+  grid-template-areas: "header header"
+ "main main"
+ "footer footer"; }
+
+.header {
+  grid-area: header;
+  background-image: url(https://img.freepik.com/foto-gratis/fondo-suelo-textura-madera-beige_53876-129530.jpg);
+  height: 14vh;
+}
+
+.navbar-brand {
+  font-family: "Nanum Myeongjo", serif;
+  padding-top: var(--bs-navbar-brand-padding-y);
+  padding-bottom: 0;
+  margin-right: var(--bs-navbar-brand-margin-end);
+  font-size: 30px;
+  color: var(--bs-navbar-brand-color);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.bg-body-tertiary {
+  --bs-bg-opacity: 0.3;
+  height: 14vh;
+}
+
+.main {
+  grid-area: main;
+  background-image: linear-gradient(0deg, rgb(242 225 201) 0%, rgb(255 255 255) 5%, rgb(155, 209, 243) 27%, rgb(134, 202, 233) 31%, rgb(59, 177, 231) 40%, rgb(7, 163, 225) 48%, rgb(227, 251, 255) 52%, rgb(181, 243, 255) 68%);
+  display: grid;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  padding-top: 75px; }
+
+
+.element.style {
+  max-width: 50vw; }
+
+.footer {
+  background-image:linear-gradient(0deg, rgb(215 186 142) 0%, rgb(215 194 158) 40%, rgb(235 216 174) 75%, rgb(245 229 211) 98%);
+  grid-area: footer;
+  margin-bottom: 0; }
+
+.footer .ul-footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 16vh;
+  list-style: none; }
+
+.footer .ul-footer li {
+  color: #fff9f4;
+  font-size: 16px; }
+
+/* INDEX */
+
+.buscar {
+  display: flex;
+  flex-direction: column;
+  padding-top: -5px;
+}
+
+.row {
+  justify-content: space-around;
+  align-items: center;
+}
+
+.buscador {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  margin-top: 43px;
+  background-image: url(https://media.istockphoto.com/id/1223611280/es/foto/fondo-de-textura-de-madera-marr%C3%B3n-los-tablones-de-madera-antiguos-de-la-vista-superior-de-la.jpg?s=170667a&w=0&k=20&c=nqg62VD_gRaM5EwIM8UZeiHjNArhFcuLCeabyR9Tx0I=);
+  justify-content: space-around;
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#C7B4A4", endColorstr="#51341E", GradientType=1 );
+  border-radius: 60px;
+}
+
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+  width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * .5);
+  padding-left: calc(var(--bs-gutter-x) * .5);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 75vh;
+  /* margin-top: 27px; */
+  align-content: space-around;
+  justify-content: flex-start;
+}
+
+button, input, optgroup, select, textarea {
+  margin: 0;
+  background-image: -webkit-radial-gradient(#f3eee9,#fff5e3);
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  border-radius: 14px;
+  text-align: center;
+  border: none;
+}
+
+a:not([href]):not([class]), a:not([href]):not([class]):hover {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+h2{
+  font-family: cursive;
+  width: 250px;
+  margin: 40px 0 40px 40px;
+}
+
+#form{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 7vh;
+  width: 90vw;
+  font-size: 18px;
+  color: white;
+  align-items: center;
+}
+
+.btn-outline-danger {
+  --bs-btn-color: black;
+  --bs-btn-border-color: #fff5e3;
+  --bs-btn-hover-color: black;
+  --bs-btn-hover-bg: #13d0ff;
+  --bs-btn-hover-border-color: black;
+  --bs-btn-focus-shadow-rgb: 220,53,69;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #000000;
+  --bs-btn-active-border-color: #4b4142;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-gradient: none;
+  text-align: center;
+  border-radius: 40px;
+}
+
+.inmueble {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#propiedades {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  width: 73vw;
+  justify-content: space-around;
+  padding: -35px 50px 1px 1px;
+  border-radius: 37px;
+}
+
+.propiedad {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: 360px;
+  justify-content: space-evenly;
+}
+.propiedad img {
+  width: 275px;
+  height: 265px;
+}
+.propiedad p {
+  width: 340px;
+  height: 7vh;
+  color: white;
+  font-size: 14px;
+  margin: 15px 0 30px 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+}
+
+.card-header:first-child {
+  width: 360px;
+  font-family: "Patua One", cursive;
+  font-size: 18px;
+  border-radius: 54px;
+  margin-bottom: 25px;
+  background-image: url(https://img.freepik.com/foto-gratis/fondo-suelo-textura-madera-beige_53876-129530.jpg);
+}
+
+.text-bg-light {
+  width: 360px!important;
+  background-color: transparent!important;
+}
+
+.mb-3 {
+  border: none;
+}
+
+.card-body {
+  height: 24vh;
+  width: 360px;
+  color: white;
+  padding: 5px;
+  border-radius: 18px;
+  flex: 1 1 auto;
+  background: -webkit-radial-gradient(circle, hsl(27, 33%, 74%) 0%, hsl(29, 16%, 30%) 0%, hsl(26, 11%, 43%) 100%);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-0.5 * var(--bs-gutter-x));
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
+}
+
+.btn-outline-dark{
+  background-color: rgb(162, 137, 108) ;
+  color: #000000;
+  border-color: none;
+
+}
+
+#verFotos{
+  align-content: center;
+  width: 10vw;
+}
+
+/* SECCION PLAYAS DORADAS*/
+
+.balneario {
+  display: flex;
+  font-size: 30px;
+  justify-content: space-around;
+  margin: 0; }
+  
+.galeria {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  width: 1200px;
+  height: 325px;
+  padding: 10px 20px 10px 20px; }
+
+.galeria iframe {
+  width: 400px;
+  height: 320px;
+  margin: 0px 0px 10px 0px;
+  padding-bottom: 15px; }
+
+.fotos {
+  display: flex;
+  flex-wrap: wrap;
+  width: 800px;
+  padding-bottom: 15px; }
+
+.fotos img {
+  width: 250px;
+  height: 160px;
+  padding: 0 0px 10px 20px; }
+
+/* SECCION ALQUILERES */
+
+.alquileres input {
+  margin: 35px 0px 40px 0px;
+  border: #41301a 1px solid;
+  background-color: #e5ceb3;
+  color: #000000;
+  padding: 0 5px 0 5px; }
+
+/* SECCIONES QUIENES SOMOS Y CONTACTO */
+
+.quienes-somos{
+  display: flex;
+  flex-direction: row; }
+
+.quienes-somos img {
+  width: 540px;
+  height: 300px;
+  padding: 20px; }
+
+.quienes-somos iframe {
+  width: 450px;
+  height: 300px; }
+
+.quienes-somos .parrafo {
+  font-family: "Open Sans", sans-serif; }
+
+.quienes-somos .parrafo p {
+  width: 491px;
+  height: 300px;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0; }
+
+/* MQ MOBILE LAST */
+/* LAPTOP */
+
+@media (max-width: 1200px) {
+  .grid-padre {
+    grid-template-rows: 15vh 70vh 20vh;
+    grid-template-areas: "header header"
+ "main main"
+ "footer footer"; }
+  .bg-body-tertiary {
+    --bs-bg-opacity: 0.5;
+    height: 15vh; }
+  /* SECCION PLAYAS DORADAS */
+  .galeria {
+    width: 800px;
+    height: 300px;
+    margin-bottom: 0;}
+  .galeria iframe {
+    width: 250px; }
+  .fotos {
+    width: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; }
+  .fotos img {
+    width: 200px;
+    height: 140px;
+    padding: 0 20px 12px 0;
+    justify-content: space-between; }
+  .alquileres input {
+    margin: 0px 0px 25px 0px;
+    padding: 0 5px 0 5px; }
+  .quienes-somos{
+    display: flex;
+    flex-direction: row; }
+  .quienes-somos img {
+    width: 360px;
+    height: 280px; }
+  .quienes-somos .parrafo p {
+    width: 400px;
+    height: 280px;
+    padding: 15px;
+    font-size: 11px;
+    font-family: Arial, Helvetica, sans-serif; }
+  .quienes-somos iframe {
+    width: 350px;
+    height: 280px; } }
+
+/* MOBILE */
+@media (max-width: 576px) {
+  .grid-padre {
+    grid-template-columns: 100vw;
+    grid-template-rows: 0.4fr 5fr 0.45fr;
+    grid-template-areas: "header"
+ "main"
+ "footer"; }
+  .header {
+    align-items: center;
+    justify-content: space-between;
+    height: 0.4fr;
+    background-image: url(https://img.freepik.com/foto-gratis/fondo-suelo-textura-madera-beige_53876-129530.jpg); }
+    .header h1 {
+      font-size: 15px; }
+  .navbar-nav {
+    background-color: #f8efe0;
+    opacity: 0.6; }
+  .bg-body-tertiary {
+    --bs-bg-opacity: 0.5;
+    height: 0.4fr; }
+  .main {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 10px 10px 10px; }
+  .footer .ul-footer {
+    height: 0.45fr;
+    padding: 15px; }
+  /* INDEX */
+  /* .propiedad {
+    display: flex;
+    flex-direction: column; }
+    .propiedad img {
+      max-width: 88vw;
+      height: 400px; }
+    .propiedad p {
+      padding: 10px 0 10px 0;
+      max-width: 88vw;
+      font-size: 20px; } */
+  /* SECCION PLAYAS DORADAS */
+  .balneario {
+    width: 135px;
+    font-size: 18px;
+    padding: 20px 0 32px 0; }
+  .galeria {
+    flex-direction: column;
+    max-width: 94vw; }
+  .galeria iframe {
+    width: 75vw;
+    height: 350px;
+    padding: 0px 10px 12px 10px; }
+  .fotos {
+    max-width: 75vw;
+    justify-content: space-around; }
+    .fotos img {
+      width: 70vw;
+      height: 25vh;
+      padding: 0 10px 12px 10px; }
+  /* SECCIONES QUIENES SOMOS Y CONTACTO */
+  .quienes-somos iframe {
+    max-width: 89vw;
+    padding: 20px; }
+  .quienes-somos .parrafo p {
+    width: 89vw;
+    max-height: 54vh;
+    padding: 1px; }
+  .quienes-somos img {
+    max-width: 89vw;
+    padding: 20px; } }

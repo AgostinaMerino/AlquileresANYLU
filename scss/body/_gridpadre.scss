@@ -1,0 +1,9 @@
+.grid-padre{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 14vh 70vh 16vh;
+    grid-template-areas:
+    "header header"
+    "main main"
+    "footer footer";
+}

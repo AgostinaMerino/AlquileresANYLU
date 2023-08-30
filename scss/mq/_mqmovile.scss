@@ -1,0 +1,107 @@
+@media(max-width: 576px){
+    .grid-padre{
+        grid-template-columns: 100vw;
+        grid-template-rows: 0.4fr 5fr 0.45fr;
+        grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    }
+    .header{
+        align-items: center;
+        justify-content: space-between;
+        height: 0.4fr;
+        background-image: url(https://img.freepik.com/foto-gratis/fondo-suelo-textura-madera-beige_53876-129530.jpg);
+        h1{
+            font-size: 15px;
+        }
+
+    }
+    .navbar-nav{
+        background-color: #f8efe0;
+        opacity: 0.6;
+    }
+
+    .bg-body-tertiary{
+        --bs-bg-opacity: 0.5;
+        height: 0.4fr;
+    }
+
+    .main{
+        display: flex;
+        flex-direction: column;
+        padding: 30px 10px 10px 10px;
+    }
+
+    .footer{
+        .ul-footer{
+            height: 0.45fr;
+            padding: 15px;
+        }
+    }
+
+    /* INDEX */
+
+    .propiedad{
+        display: flex;
+        flex-direction: column;
+        img{
+            max-width: 88vw;
+            height: 400px;
+        }
+        p{
+            padding: 10px 0 10px 0;
+            max-width: 88vw;
+            font-size: 20px;
+        }
+    }
+
+    /* SECCION PLAYAS DORADAS */
+
+    .balneario{
+        width: 135px;
+        font-size: 18px;
+        padding: 20px 0 32px 0;
+    }
+
+    .galeria{
+        flex-direction: column;
+        max-width: 94vw;
+    }
+
+    .galeria iframe{
+        width: 75vw;
+        height: 350px;
+         padding: 0px 10px 12px 10px;
+    }
+
+    .fotos{
+        max-width: 75vw;
+        justify-content: space-around;
+        img{
+            width: 70vw;
+            height: 25vh;
+            padding: 0 10px 12px 10px;
+        }
+    }
+
+    /* SECCIONES QUIENES SOMOS Y CONTACTO */
+
+    .quienes-somos{
+        iframe{
+            max-width: 89vw;
+            padding: 20px;
+        }
+        .parrafo{
+            p{
+            width: 89vw;
+            max-height: 54vh;
+            padding: 1px;
+            }
+        }
+        img{
+            max-width: 89vw;
+            padding: 20px;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+// Variable: color de fondo footer
+$footer:#5a4d40;
+
+.footer{
+    background-color: $footer;
+    grid-area: footer;
+    .ul-footer{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100px;
+        list-style: none;
+        li{
+            color: #fff9f4;
+            font-size: 16px;
+        }
+    }
+    // height: 15vh;
+}

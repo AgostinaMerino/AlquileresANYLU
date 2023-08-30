@@ -1,0 +1,124 @@
+// variable: letra de parrafos
+$fuenteparrafos: 'Open Sans', sans-serif;
+
+
+    
+.buscar {
+    display: flex;
+    flex-direction: column;
+    padding-top: -5px;
+}
+
+.row {
+    justify-content: space-around;
+    align-items: center;
+}
+
+.buscador {
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    margin-top: 43px;
+    background-image: url(https://media.istockphoto.com/id/1223611280/es/foto/fondo-de-textura-de-madera-marr%C3%B3n-los-tablones-de-madera-antiguos-de-la-vista-superior-de-la.jpg?s=170667a&w=0&k=20&c=nqg62VD_gRaM5EwIM8UZeiHjNArhFcuLCeabyR9Tx0I=);
+    justify-content: space-around;
+}
+
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 75vh;
+    /* margin-top: 27px; */
+    align-content: space-around;
+}
+    
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    border-radius: 14px;
+    text-align: center;
+}
+
+a:not([href]):not([class]), a:not([href]):not([class]):hover {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.inmueble {
+    display: flex;
+    flex-direction: row;
+    padding: -2px;
+    justify-content: space-evenly;
+}
+
+#propiedades {
+    display: flex;
+    align-items: center;
+    margin-top: 34px;
+    width: 73vw;
+    justify-content: space-around;
+    padding: -35px 50px 1px 1px;
+    border-radius: 37px;
+}
+
+.propiedad{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: transparent;
+    p{
+        width: 275px;
+        color: white;
+        font-size: 14px;
+        margin: 20px 0 0 0;
+        font-family: $fuenteparrafos;
+    }
+}
+
+.card-header:first-child {
+    width: 361px;
+    color: #fff;
+    font-family: 'Patua One', cursive;
+    font-size: 18px;
+    border-radius: 54px;
+    margin-bottom: 25px;
+}
+
+.mb-3 {
+    margin-bottom: 1rem!important;
+    border-radius: 31px;
+}
+
+.card-body {
+    height: 149px;
+    width: 361px;
+    color: white;
+    padding: 5px;
+    border-radius: 18px;
+    flex: 1 1 auto;
+    background: -webkit-radial-gradient(circle, hsla(27, 33%, 74%, 1) 0%, hsla(29, 16%, 30%, 1) 0%, hsla(26, 11%, 43%, 1) 100%);
+}
+    
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+}
+    

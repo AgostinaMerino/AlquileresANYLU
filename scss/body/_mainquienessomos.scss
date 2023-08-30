@@ -1,0 +1,25 @@
+//variable: letra de parrafos
+$fuenteparrafos: 'Open Sans', sans-serif;
+
+.quienes-somos{
+    img{
+        margin-top: 35px;
+        width: 540px;
+        height: 300px;
+        padding: 20px;
+    }
+    iframe{
+        margin-top: 55px;
+        width: 450px;
+        height: 300px;
+    }
+    .parrafo{
+        font-family: $fuenteparrafos;
+        p {
+            margin-top: 50px;
+            margin-bottom: 1rem;
+            // margin-right: 40px;
+        }
+    }
+
+}

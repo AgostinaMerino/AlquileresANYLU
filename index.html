@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Palabras clave -->
+    <meta name="keywords" content="alquiler, playa, sierra, departamento, casa">
+    <meta name="description" content="ANyLU alquiler de departamentos playas doradas sierra grande rio negro">
+    <link rel="short cut icon" href="https://res.cloudinary.com/djgqrbl22/image/upload/v1684711971/logo3_vaw0i7.png">
+    <title>Inicio | ANyLU</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="grid-padre">
+        <header class="header">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <h1 class="navbar-brand" href="#" id="titulo"></h1>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./secciones/alquileres.html">Alquileres</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./secciones/quienes_somos.html">Quienes Somos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./secciones/playas_doradas.html">Playas Doradas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./secciones/contacto.html">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        
+        <main class="main">
+            <div class="container">
+                <div class="buscar row">
+                    <section class="buscador row">
+                        <form id="form" name="formulario">
+                            <input id="nomYApe" type="text" name="Nombre" placeholder="Nombre y Apellido" required>
+                            <a>cantidad de personas</a>
+                            <input id="per2" type="radio" name="cantPersonas" value="2" placeholder="2" class="radio" checked><label for="per2">2</label>
+                            <input id="per3" type="radio" name="cantPersonas" class="radio" value="3" placeholder="3"><label for="per3">3</label>
+                            <input id="per4" type="radio" name="cantPersonas" class="radio" value="4" placeholder="4"><label for="per4">4</label>
+                            <input id="per5" type="radio" name="cantPersonas" class="radio" value="5" placeholder="5"><label for="per5">5</label>
+                            <input id="per6" type="radio" name="cantPersonas" class="radio" value="6" placeholder="6"><label for="per6">6</label>
+                            
+                            <input id="fechaIn" type="date" name="fechaIn" placeholder="Fecha de ingreso" required>                                
+                            <input id="fechaSal" type="date" name="fechaSal" placeholder="Fecha de salida" required>  
+                            <input id="telefono" type="tel" name="telefono" placeholder="Telefono" required>
+                            <input id="consultar" type="submit" name="consultar" class="btn btn-outline-danger" value="Consultar">
+                            
+                        </form>
+                    </section>
+                </div>
+                <div class="container text-center">
+                    <section class="inmueble">
+                        <section class="row">
+                            <section id="propiedades">
+                            </section>
+                        </section>
+                    </section>
+
+                    <section class="inmueble">
+                        <section class="row">
+                            <section id="propiedades" >
+                            </section>
+                        </section>  
+                    </section>
+                    
+                    <section class="inmueble">
+                    <button onclick="location.href='./secciones/playas_doradas.html'" id="verFotos">Ver Fotos</button>
+                    </section>
+                </div>
+            </div>
+        </main>
+        
+        <footer class="footer">
+            <ul class="ul-footer">
+                <li class="logo"><img src="https://res.cloudinary.com/djgqrbl22/image/upload/v1684721963/rsz_ig-logo_pbaayu.png" alt="logo instagram"></li>
+                <li class="logo"><img src="https://res.cloudinary.com/djgqrbl22/image/upload/v1684721951/rsz_1fb-logo_pyduzo.png" alt="logo facebook"></li>
+                <li class="logo"><img src="https://res.cloudinary.com/djgqrbl22/image/upload/v1684721951/rsz_1wsp-logo_ap2ort.png" alt="logo whatsapp"></li>
+            </ul>
+        </footer>
+        
+    </div>
+    <script src="./js/index.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js" integrity="sha256-S/HO+Ru8zrLDmcjzwxjl18BQYDCvFDD7mPrwJclX6U8=" crossorigin="anonymous"></script>
+</body>
+</html>
+

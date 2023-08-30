@@ -1,0 +1,13 @@
+
+// Variale: Color de fondo main
+$main:linear-gradient(#fff5e3,#5a4d41);
+
+.main{
+    grid-area: main;
+    background-image: $main;
+    display: flex;
+    padding: 15px;
+    justify-content: space-around;
+    align-items: center;
+    // height: 100vh;
+}

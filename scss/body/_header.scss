@@ -1,0 +1,25 @@
+// Variable: tipografia ANyLU
+
+$Serif:  'Nanum Myeongjo', serif;
+
+header {
+    grid-area: header;
+    height: 10vmax;
+    background-image: url(https://img.freepik.com/fotos-premium/fondo-madera-o-fondo-madera-madera_493806-11377.jpg?w=740);
+}
+
+.navbar-brand {
+    font-family: $Serif;
+    padding-top: var(--bs-navbar-brand-padding-y);
+    padding-bottom: 0;
+    margin-right: var(--bs-navbar-brand-margin-end);
+    font-size: 30px;
+    color: var(--bs-navbar-brand-color);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.bg-body-tertiary {
+    --bs-bg-opacity: 0.3;
+    height: 8vmax;
+}

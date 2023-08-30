@@ -1,0 +1,14 @@
+//Variable: color de formulario
+$form:#e5ceb3;
+
+.alquileres input{
+    margin: 35px 0px 40px 0px;
+    border: #41301a 1px solid;
+    background-color: $form;
+    color: #000000;
+    padding: 0 5px 0 5px;
+}
+
+.btn-outline-dark{
+    background-color: #d3bfa3;
+}
