@@ -45,69 +45,64 @@ props.push(new Propiedad(
 
 //validar formulario para evitar recarga del sitio al enviar
 
-let formulario = document.getElementById('form')
-formulario.addEventListener('submit', validarFormulario) 
-function validarFormulario(evt) {
+const $formulario = document.querySelector('#form')
+$formulario.addEventListener('submit', validarFormulario) 
+async function validarFormulario(evt) {
     evt.preventDefault()
-    const datosForm = new FormData(formulario)
-    fetch("https://formsubmit.co/ajax/agostina.merino@mi.unc.edu.ar",{
-        method: "POST",
-        body: datosForm
+    const form = new FormData(this)
+    const respuesta = await fetch("https://formspree.io/f/xleyneor",{
+        method: this.method,
+        body: form,
+        headers:{
+            'Accept': 'application/json'
+        }
         })
-        .then(respuesta=>respuesta?respuesta.json():Promise.reject(respuesta))  
-        .then(json => {
-            console.log(json)
-        })
-        .catch(err =>{
-            console.log(err)
-        })
-          
-}
+        if (respuesta.ok) {
+            let obtenerDatos = () => {
+            let error = validar()
+            if (error == true) {
+                Swal.fire({
+                    title: 'Error',
+                    text: 'Por favor complete los campos requeridos',
+                    imageUrl: "https://www.quever.news/u/fotografias/m/2020/12/24/f768x1-4793_4920_0.jpg",
+                    imageWidth: 300,
+                    imageHeight: 200,
+                    imageAlt: "campoIncompleto"
+                })
+            } else {
+                Swal.fire({
+                    title: '¡Excelente!',
+                    text: 'En breve nos comunicaremos para ofrecerte mas información',
+                    imageUrl: "https://media.lacapital.com.ar/p/f2d9862954fe0e332a2052192197c945/adjuntos/203/imagenes/030/624/0030624559/642x0/smart/friends-chandlerjpg.jpg",
+                    imageWidth: 300,
+                    imageHeight: 200,
+                    imageAlt: "campoCompleto"
+                })
+            }
+        }
+
+        let validar = () => {
+            let nombre = document.getElementById('nomYApe')
+            let telef = document.getElementById('telefono')
+            let error = false
+
+            if (nombre?.value == ' ' || nombre?.value == 'undefined' || nombre?.value == 'hola' || nombre?.value == 'null'|| telef?.value == '' || telef?.value <= 999999) {
+                error = true
+            }
+            return error
+        }
+
+        $formulario.addEventListener('submit', obtenerDatos);
+
+    }
     
-
-let obtenerDatos = () => {
-    let error = validar()
-    if (error == true) {
-        Swal.fire({
-            title: 'Error',
-            text: 'Por favor complete los campos requeridos',
-            imageUrl: "https://www.quever.news/u/fotografias/m/2020/12/24/f768x1-4793_4920_0.jpg",
-            imageWidth: 300,
-            imageHeight: 200,
-            imageAlt: "campoIncompleto"
-        })
-    } else {
-        Swal.fire({
-            title: '¡Excelente!',
-            text: 'En breve nos comunicaremos para ofrecerte mas información',
-            imageUrl: "https://media.lacapital.com.ar/p/f2d9862954fe0e332a2052192197c945/adjuntos/203/imagenes/030/624/0030624559/642x0/smart/friends-chandlerjpg.jpg",
-            imageWidth: 300,
-            imageHeight: 200,
-            imageAlt: "campoCompleto"
-        })
-    }
 }
-
-let validar = () => {
-    let nombre = document.getElementById('nomYApe')
-    let telef = document.getElementById('telefono')
-    let error = false
-
-    if (nombre?.value == 'null' || nombre?.value == '' || telef?.value == '' || telef?.value <= 999999) {
-        error = true
-    } else{
-    }
-    console.log(error)
-    return error
-}
-
-formulario.addEventListener('submit', obtenerDatos);
 
 let inputNom = document.getElementById('nomYApe') 
 inputNom.addEventListener('change',function(){
     console.log(inputNom.value)
-    let nomApLS = localStorage.setItem('nomApe',inputNom.value)
-    console.log("contenido del locastorage:" + localStorage.getItem('nomApe'))
+    let nomApLS = localStorage.setItem('nomApe',JSON.stringify(inputNom.value))
+    console.log("contenido del locastorage:" + JSON.parse(localStorage.getItem('nomApe')))
 })
 let inputTel = document.getElementById('telefono')
 inputTel.addEventListener('change',function(){
@@ -115,15 +110,7 @@ inputTel.addEventListener('change',function(){
     let telefLS = localStorage.setItem('tel',JSON.stringify(inputTel.value))
     console.log("el telefono guardado en local storage es: " + JSON.parse(localStorage.getItem('tel')))
 })
-fetch("https://formsubmit.co/ajax/agostina.merino@mi.unc.edu.ar",{
-        method: "POST",
-        body: new FormData(formulario)
-        })
-        .then(res=>res.ok?res.json:Promise.reject(res))  
-        .then(json => {})
-        .catch(err =>
-            console.log(err)
-        );  
+  
 let nomApe
 let nomApeLS = localStorage.getItem('nomApe')
 nomApeLS ? nomApe = nomApeLS : console.log('nombre y apellido: ' + nomApe || 'Aun no se ha registrado ningun nombre')
