@@ -45,13 +45,25 @@ props.push(new Propiedad(
 
 //validar formulario para evitar recarga del sitio al enviar
 
-let botonEnviar = document.getElementById('form')
-botonEnviar.addEventListener('submit', validarFormulario) 
+let formulario = document.getElementById('form')
+formulario.addEventListener('submit', validarFormulario) 
 function validarFormulario(evt) {
     evt.preventDefault()
-    console.log('Enviando formulario')                     
+    const datosForm = new FormData(formulario)
+    fetch("https://formsubmit.co/ajax/agostina.merino@mi.unc.edu.ar",{
+        method: "POST",
+        body: datosForm
+        })
+        .then(respuesta=>respuesta?respuesta.json():Promise.reject(respuesta))  
+        .then(json => {
+            console.log(json)
+        })
+        .catch(err =>{
+            console.log(err)
+        })
+          
 }
-
+    
 
 let obtenerDatos = () => {
     let error = validar()
@@ -81,7 +93,7 @@ let validar = () => {
     let telef = document.getElementById('telefono')
     let error = false
 
-    if (nombre?.value == 'null' || nombre?.value == 'undefined' || nombre?.value == '' || telef?.value == '' || telef?.value <= 999999) {
+    if (nombre?.value == 'null' || nombre?.value == '' || telef?.value == '' || telef?.value <= 999999) {
         error = true
     } else{
     }
@@ -89,7 +101,7 @@ let validar = () => {
     return error
 }
 
-botonEnviar.addEventListener('submit', obtenerDatos);
+formulario.addEventListener('submit', obtenerDatos);
 
 let inputNom = document.getElementById('nomYApe') 
 inputNom.addEventListener('change',function(){
@@ -99,10 +111,19 @@ inputNom.addEventListener('change',function(){
 })
 let inputTel = document.getElementById('telefono')
 inputTel.addEventListener('change',function(){
+    console.log(inputTel.value)
     let telefLS = localStorage.setItem('tel',JSON.stringify(inputTel.value))
-    console.log("el telefono guardado en local storage es: " + JSON.parse(localStorage.getItem('telefono')))
+    console.log("el telefono guardado en local storage es: " + JSON.parse(localStorage.getItem('tel')))
 })
-
+fetch("https://formsubmit.co/ajax/agostina.merino@mi.unc.edu.ar",{
+        method: "POST",
+        body: new FormData(formulario)
+        })
+        .then(res=>res.ok?res.json:Promise.reject(res))  
+        .then(json => {})
+        .catch(err =>
+            console.log(err)
+        );  
 let nomApe
 let nomApeLS = localStorage.getItem('nomApe')
 nomApeLS ? nomApe = nomApeLS : console.log('nombre y apellido: ' + nomApe || 'Aun no se ha registrado ningun nombre')
@@ -123,4 +144,6 @@ fechaSali.onchange= ()=>{
     let salida = fechaSali.value
     console.log(salida) 
 }
+
+                 
 
