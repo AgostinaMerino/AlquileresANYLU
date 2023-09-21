@@ -21,7 +21,7 @@
 .header {
   grid-area: header;
   background-image: url(https://img.freepik.com/foto-gratis/fondo-suelo-textura-madera-beige_53876-129530.jpg);
-  height: 15vh;
+  height: 14vh;
 }
 
 .navbar-brand {
@@ -37,7 +37,7 @@
 
 .bg-body-tertiary {
   --bs-bg-opacity: 0.3;
-  height: 15vh;
+  height: 14vh;
 }
 
 .main {
@@ -105,7 +105,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  height: 81vh;
+  height: 75vh;
   /* margin-top: 27px; */
   align-content: space-around;
   justify-content: flex-start;
@@ -115,7 +115,7 @@ button, input, optgroup, select, textarea {
   margin: 0;
   background-image: -webkit-radial-gradient(#f3eee9,#fff5e3);
   font-family: inherit;
-  font-size: 14px;
+  font-size: inherit;
   line-height: inherit;
   border-radius: 14px;
   text-align: center;
@@ -159,6 +159,11 @@ h2{
   --bs-gradient: none;
   text-align: center;
   border-radius: 40px;
+}
+
+#datosCliente p{
+  margin-top: 12px;
+  margin-bottom: 0;
 }
 
 .inmueble {
@@ -206,7 +211,7 @@ h2{
   font-family: "Patua One", cursive;
   font-size: 18px;
   border-radius: 54px;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
   background-image: url(https://img.freepik.com/foto-gratis/fondo-suelo-textura-madera-beige_53876-129530.jpg);
 }
 
@@ -220,7 +225,7 @@ h2{
 }
 
 .card-body {
-  height: 29vh;
+  height: 24vh;
   width: 360px;
   color: white;
   padding: 5px;
