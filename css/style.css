@@ -326,14 +326,30 @@ h2{
 
 @media (max-width: 1200px) {
   .grid-padre {
-    grid-template-rows: 15vh 70vh 20vh;
+    grid-template-rows: 14vh 70vh 20vh;
     grid-template-areas: "header header"
  "main main"
  "footer footer"; }
   .bg-body-tertiary {
     --bs-bg-opacity: 0.5;
-    height: 15vh; }
+    height: 14vh; }
+    .main {
+      padding-top: 60px;
+  }
   /* SECCION PLAYAS DORADAS */
+  a:not([href]):not([class]), a:not([href]):not([class]):hover {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+  }
+  #form{
+    font-size: 14px;
+    color: white;
+    align-items: center;
+  }
+  .card-header:first-child {
+    margin-bottom: 15px;
+  }
   .galeria {
     width: 800px;
     height: 300px;

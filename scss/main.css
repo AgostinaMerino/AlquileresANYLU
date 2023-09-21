@@ -50,7 +50,6 @@ header {
   background-color: #5a4d40;
   grid-area: footer;
 }
-
 .footer .ul-footer {
   display: flex;
   justify-content: space-around;
@@ -58,7 +57,6 @@ header {
   height: 100px;
   list-style: none;
 }
-
 .footer .ul-footer li {
   color: #fff9f4;
   font-size: 16px;
@@ -255,12 +253,12 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
 /* LAPTOP */
 @media (max-width: 1200px) {
   .grid-padre {
-    grid-template-rows: 15vh 70vh 20vh;
+    grid-template-rows: 14vh 70vh 20vh;
     grid-template-areas: "header header" "main main" "footer footer";
   }
   .bg-body-tertiary {
     --bs-bg-opacity: 0.5;
-    height: 15vh;
+    height: 14vh;
   }
   /* SECCION PLAYAS DORADAS */
   .galeria {
