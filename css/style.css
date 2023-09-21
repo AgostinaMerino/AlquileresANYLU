@@ -347,8 +347,19 @@ h2{
     color: white;
     align-items: center;
   }
+  .card-body{
+    height: 29vh;
+    text-align: center;
+  }
   .card-header:first-child {
     margin-bottom: 15px;
+  }
+  .card-text:last-child {
+    margin-bottom: 0;
+}
+  #propiedades {
+    margin-top: 15px;
+    margin-bottom: -6px;
   }
   .galeria {
     width: 800px;
